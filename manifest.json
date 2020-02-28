@@ -1,0 +1,46 @@
+{
+    "manifest_version": 2,
+    "name": "testfolder",
+    "description": "test",
+    "version": "0.2",
+    "author": "o.marce@free.fr",
+    "applications": {
+        "gecko": {
+            "id": "testfolder@o.marce.free.fr",
+            "strict_min_version": "68.0"
+        }
+    },
+    "permissions": [
+        "accountsRead",
+        "messagesRead",
+	"addressBooks",
+	"alarms",
+	"storage",
+	"tabs",
+	"activeTab"
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "icons": {
+        "64": "images/icon.png",
+        "32": "images/icon-32px.png",
+        "16": "images/icon-16px.png"
+    }
+    ,"experiment_apis": {
+	"myapi": {
+	    "schema": "schema.json",
+	    "parent": {
+		"scopes": [
+		    "addon_parent"
+		],
+		"paths": [
+		    [
+			"myapi"
+		    ]
+		],
+		"script": "implementation.js"
+	    }
+	}
+    }
+}

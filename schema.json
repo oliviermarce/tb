@@ -1,0 +1,28 @@
+[
+    {
+	"namespace": "myapi",
+
+
+	"events": [
+	    {
+		"name": "onNewMsg",
+		"type": "function",
+		"description": "Fires when a new message is added to a folder.",
+		"parameters": [
+		    {
+			"name": "msgHdr",
+			"type": "object",
+			"description": "The header of the new message."
+		    }
+		    ,{
+			"name": "folder",
+			"type": "object",
+			"description": "The folder of the new message."
+		    }
+	    
+		]
+	    }
+	]
+    }
+]
+
